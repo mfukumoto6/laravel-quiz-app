@@ -32,3 +32,7 @@ Route::get('quizzes/create', function () {
 Route::delete('quizzes/{id}', function ($id) {
   return json_encode(['message' => 'ID:' . $id . ' が削除されるIDです(仮の出力)']);
 })->name('quizzes.delete');
+
+// POSTのリクエストが来た時にどういったコントローラを呼ぶか、ここではstoreメソッド
+// POSTメソッドで'quizzes'のURLにリクエストが来たときに、自動的にQuizControllerのstoreメソッドを呼ぶ
+Route::post('quizzes', 'App\Http\Controllers\QuizController@store')->name('quizzes.store');
