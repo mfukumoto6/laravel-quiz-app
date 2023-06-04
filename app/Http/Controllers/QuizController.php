@@ -14,8 +14,11 @@ class QuizController extends Controller
    */
   public function index()
   {
-    //
-    return view('quizzes.index');
+    // Quiz::all()メソッドによって取得された全てのクイズデータを'quizzes'キー(配列)に代入
+    // ビュー('index.blade.php')内で $quizzes変数として使用
+    return view('quizzes.index', [
+      'quizzes' => Quiz::all(),
+    ]);
   }
 
   /**
