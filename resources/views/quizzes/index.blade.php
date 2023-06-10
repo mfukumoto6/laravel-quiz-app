@@ -2,15 +2,16 @@
 @section('title', 'Quiz 管理')
 
 @section('content')
-  <h1>Quiz 管理</h1>
+  <h1 class="display-4 mt-4">Quiz 管理</h1>
   <div class="row mt-5 mb-3">
     <div class="col text-right">
-      <a href="{{ route('quizzes.create') }}" type="button" class="btn btn-primary">追加</a>
+      <a href="{{ route('quizzes.create') }}" type="button" class="btn btn-lg btn-primary">＋</a>
     </div>
   </div>
   <div class="row my-3">
-    <table class="table" id="quizzes-table">
-      <thead class="thead-light">
+    <table class="table table-hover" id="quizzes-table">
+      <caption>List of Quizzes</caption>
+      <thead class="thead-dark">
         <tr>
           <th scope="col" style="width:10%">#</th>
           <th scope="col">問題</th>

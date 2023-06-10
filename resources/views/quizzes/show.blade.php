@@ -2,7 +2,7 @@
 @section('title', 'Quiz 管理 - 問題の内容')
 
 @section('content')
-  <h1>Quiz 管理 - 問題の内容</h1>
+  <h1 class="display-4 mt-4">Quiz 管理 - 問題の内容</h1>
   {{-- クイズのデータがない場合 --}}
   @if (empty($quiz))
   <div class="col mt-3 mb-5">
@@ -31,9 +31,11 @@
     <h2>答え</h2>
     <div class="pl-2">
       <span>選択肢: {{ $quiz->correct_answer }}</span>
-      <p>
-        {!! nl2br(e($quiz->explanation)) !!}
-      </p>
+      <div class="mt-3">
+        <p>
+          {!! nl2br(e($quiz->explanation)) !!}
+        </p>
+      </div>
     </div>
   </div>
   @endif

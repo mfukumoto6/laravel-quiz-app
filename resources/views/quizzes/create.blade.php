@@ -2,7 +2,7 @@
 @section('title', 'Quiz 管理 - 問題の追加')
 
 @section('content')
-  <h1>Quiz 管理 - 問題の追加</h1>
+  <h1 class="display-4 mt-4">Quiz 管理 - 問題の追加</h1>
   @if ($errors->any())
     <div class="alert alert-danger">
       <ul>
